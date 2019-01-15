@@ -1,16 +1,16 @@
-# Install scripts for a Freifunk Nordheide Gateway
+# Install scripts for a Freifunk Cuxhaven Gateway
 
-## First, make shure your system is debian jessie, system ist up to date. git has to be installed.
+## First, make sure your system is debian jessie, system is up to date. git has to be installed.
 ## A screen session is required. 
 
 ### 1. change to /opt
     cd /opt
 
-### 2. clone nordheide-puppet-config
-    git clone https://github.com/freifunk-nordheide/nordheide-puppet-config
+### 2. clone ffcux-puppet-config
+    git clone https://github.com/Freifunk-Cuxhaven/ffcux-puppet-config
     
-### 3. change to nordheide-puppet-config
-    cd nordheide-puppet-config
+### 3. change to ffcux-puppet-config
+    cd ffcux-puppet-config
 
 ### 4. create the file with the fastd private key
     echo 'secret "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";' > /root/fastd_secret.key
@@ -46,8 +46,8 @@ and adapt all needed settings to the new gateway ( eg vpn user and password )
 
 ### 12. create addtitional user and garant root to them
 
-    adduser newuser
-    adduser newuser sudo
+    adduser ffcux
+    adduser ffcux sudo
     
 ### 13. reboot machine
     reboot
