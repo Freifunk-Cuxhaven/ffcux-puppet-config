@@ -13,7 +13,7 @@
     cd ffcux-puppet-config
 
 ### 4. create the file with the fastd private key
-    echo 'secret "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";' > /root/fastd_secret.key
+    echo 'secret "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";' | sudo tee -a /root/fastd_secret.key
 
 ### 3. copy this file to the root home folder:
     cp gw00.pp /root/gw00.pp
