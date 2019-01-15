@@ -3,14 +3,14 @@
 # adapt IPV6 first!
 # do dpkg-reconfigure tzdata
 
-NAME="Freifunk Nordheide"
+NAME="Freifunk Cuxhaven"
 OPERATOR="freifunker"
 HOST_PREFIX="gw"
 SUBDOMAIN_PREFIX=vpn
 VPN_NUMBER=03
-DOMAIN="nordheide.freifunk.net"
+DOMAIN="cuxhaven.freifunk.net"
 SUDOUSERNAME="freifunker"
-TLD=ffnh
+TLD=ffcux
 
 #backborts einbauen
 echo "deb http://http.debian.net/debian jessie-backports main" >>/etc/apt/sources.list
