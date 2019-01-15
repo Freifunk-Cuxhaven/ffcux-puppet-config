@@ -1,5 +1,5 @@
 class { 'ffnord::params':
-  router_id => "10.115.4.1",	  # The id of this router, probably the ipv4 address
+  router_id => "10.115.10.1",	  # The id of this router, probably the ipv4 address
                                   # of the mesh device of the providing community
   icvpn_as => "65115",            # The as of the providing community
   wan_devices => ['eth0'],        # An array of devices which should be in the wan zone
@@ -32,13 +32,13 @@ ffnord::mesh { 'mesh_ffcux':
   , mesh_mtu     => "1374"
   , mesh_peerings    => "/root/mesh_peerings.yaml"	# path to the local peerings description yaml file
 
-  , fastd_secret => "/root/gw03-fastd-secret.key"	
+  , fastd_secret => "/root/gw06-fastd-secret.key"	
   , fastd_port   => 10050
   , fastd_peers_git => 'https://github.com/Freifunk-Cuxhaven/ffcux-gw-peers.git'	# this will be pulled automatically during puppet apply
 
-  , dhcp_ranges => ['10.115.4.2 10.115.5.254'] 	# the whole net is 10.71.0.0 - 10.71.63.255 
+  , dhcp_ranges => ['10.115.10.2 10.115.11.254'] 	# the whole net is 10.71.0.0 - 10.71.63.255 
 						# so take one 32rd of this range but don't give out the ip of the gw itself
-  , dns_servers => ['10.115.4.1']   		# should be the same as $router_id
+  , dns_servers => ['10.115.10.1']   		# should be the same as $router_id
 }
 
 ffnord::named::zone {
