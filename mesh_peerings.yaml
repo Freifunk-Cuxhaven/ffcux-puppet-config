@@ -1,24 +1,21 @@
 01.gw:
-  ipv4: "10.71.0.1"
-  ipv6: "fd8f:14c7:d318::fd01"
+  ipv4: "10.115.0.1"
+  ipv6: "fdec:c0f1:afda::ff01"
 02.gw:
-  ipv4: "10.71.3.1"
-  ipv6: "fd8f:14c7:d318::fd02"
+  ipv4: "10.115.2.1"
+  ipv6: "fdec:c0f1:afda::ff02"
 03.gw:
-  ipv4: "10.71.5.1"
-  ipv6: "fd8f:14c7:d318::fd03"
+  ipv4: "10.115.4.1"
+  ipv6: "fdec:c0f1:afda::ff03"
 04.gw:
-  ipv4: "10.71.7.1"
-  ipv6: "fd8f:14c7:d318::fd04"
+  ipv4: "10.115.6.1"
+  ipv6: "fdec:c0f1:afda::ff04"
 05.gw:
-  ipv4: "10.71.9.1"
-  ipv6: "fd8f:14c7:d318::fd05"
+  ipv4: "10.115.8.1"
+  ipv6: "fdec:c0f1:afda::ff05"
 06.gw:
-  ipv4: "10.71.11.1"
-  ipv6: "fd8f:14c7:d318::fd06"
-07.gw:
-  ipv4: "10.71.13.1"
-  ipv6: "fd8f:14c7:d318::fd07"
-map:
-  ivpv: "10.71.62.1"
-  ipv6: "fd8f:14c7:d318::fd08"
+  ipv4: "10.115.10.1"
+  ipv6: "fdec:c0f1:afda::ff06"
+service:
+  ivpv: "10.115.31.1"
+  ipv6: "fdec:c0f1:afda::ff31"
