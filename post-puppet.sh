@@ -2,21 +2,21 @@
 #https://github.com/ffnord/ffnord-puppet-gateway
 
 VPN_NUMBER=03
-DOMAIN=nordheide.freifunk.net
-TLD=ffnh
-IP6PREFIX=fd8f:14c7:d318
+DOMAIN=cuxhaven.freifunk.net
+TLD=ffcux
+IP6PREFIX=fdec:c0f1:afda
 
 # firewall config
 build-firewall
 
 #fastd ovh config
-cd /etc/fastd/ffnh-mvpn/
-git clone https://github.com/freifunk-nordheide/nordheide-gw-peers-ovh backbone
+cd /etc/fastd/ffcux-mvpn/
+git clone https://github.com/Freifunk-Cuxhaven/ffcux-gw-peers backbone
 touch /usr/local/bin/update-fastd-gw
 cat <<-EOF>> /usr/local/bin/update-fastd-gw
 #!/bin/bash
 
-cd /etc/fastd/ffnh-mvpn/backbone
+cd /etc/fastd/ffcux-mvpn/backbone
 git pull -q
 EOF
 chmod +x /usr/local/bin/update-fastd-gw
@@ -25,4 +25,4 @@ chmod +x /usr/local/bin/update-fastd-gw
 check-services
 echo 'maintenance off if needed !'
 echo 'adapt hostname in the OVH-template /etc/cloud/templates/hosts.debian.tmpl and reboot'
-echo 'add "include peers from "nordheide-gw-peers-ovh";" to fastd.conf'
+echo 'add "include peers from "ffcux-gw-peers";" to fastd.conf'
