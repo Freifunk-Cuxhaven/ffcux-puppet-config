@@ -3,13 +3,13 @@
 # adapt IPV6 first!
 # do dpkg-reconfigure tzdata
 
-NAME="Freifunk Cuxhaven"
-OPERATOR="freifunker"
+NAME="Freifunk Cuxland"
+OPERATOR="ffcux"
 HOST_PREFIX="gw"
 SUBDOMAIN_PREFIX=vpn
-VPN_NUMBER=03
-DOMAIN="cuxhaven.freifunk.net"
-SUDOUSERNAME="freifunker"
+VPN_NUMBER=01
+DOMAIN="cuxland.freifunk.net"
+SUDOUSERNAME="ffcux"
 TLD=ffcux
 
 #backborts einbauen
