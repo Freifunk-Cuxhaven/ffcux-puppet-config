@@ -1,8 +1,8 @@
 #!/bin/bash
 #https://github.com/ffnord/ffnord-puppet-gateway
 
-VPN_NUMBER=03
-DOMAIN=cuxhaven.freifunk.net
+VPN_NUMBER=01
+DOMAIN=cuxland.freifunk.net
 TLD=ffcux
 IP6PREFIX=fdec:c0f1:afda
 
