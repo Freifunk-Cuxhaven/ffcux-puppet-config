@@ -36,7 +36,7 @@ ffnord::mesh { 'mesh_ffcux':
   , fastd_port   => 10050
   , fastd_peers_git => 'https://github.com/Freifunk-Cuxhaven/ffcux-gw-peers.git'	# this will be pulled automatically during puppet apply
 
-  , dhcp_ranges => ['10.115.0.20 10.115.1.254'] 	# the whole net is 10.71.0.0 - 10.71.63.255 
+  , dhcp_ranges => ['10.115.0.20 10.115.63.253'] 	# the whole net is 10.71.0.0 - 10.71.63.255 
 						# so take one 32rd of this range but don't give out the ip of the gw itself
   , dns_servers => ['10.115.0.1']   		# should be the same as $router_id
 }
