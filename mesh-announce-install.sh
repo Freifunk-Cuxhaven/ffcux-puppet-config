@@ -21,7 +21,7 @@ cat <<-EOF>> /etc/systemd/system/respondd.service
 [Unit]
 Description=Respondd
 [Service]
-ExecStart=/opt/mesh-announce/respondd.py -d /opt/mesh-announce  -i brffnh -i ffnh-mvpn -b bat-ffnh
+ExecStart=/opt/mesh-announce/respondd.py -d /opt/mesh-announce  -i brffcux -i ffcux-mvpn -b bat-ffcux
 Restart=always
 Environment=PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 [Install]
