@@ -87,7 +87,7 @@ echo ip_conntrack >> /etc/modules
 touch /usr/local/bin/online
 cat <<-EOF>> /usr/local/bin/online
 #!/bin/bash
-maintenance off && service ntp start && batctl -m bat-ffnh gw server 100000/100000 && check-services
+maintenance off && service ntp start && batctl -m bat-ffcux gw server 100000/100000 && check-services
 EOF
 chmod +x /usr/local/bin/online
 
