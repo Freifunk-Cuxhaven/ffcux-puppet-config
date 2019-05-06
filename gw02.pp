@@ -26,13 +26,13 @@ ffnord::mesh { 'mesh_ffcux':
   , mesh_mac  => "16:ca:ff:ee:ba:be"
   , vpn_mac  => "16:ca:ff:ee:ba:be"
   , mesh_ipv6 => "fdec:c0f1:afda::/64"
-  , mesh_ipv4  => "10.115.0.1/19"	# ipv4 address of mesh device in cidr notation, e.g. 10.35.0.1/19
-  , range_ipv4 => "10.115.0.0/18"	# ipv4 range allocated to community, this might be different to
+  , mesh_ipv4  => "10.115.2.1/19"	# ipv4 address of mesh device in cidr notation, e.g. 10.35.0.1/19
+  , range_ipv4 => "10.115.0.0/23"	# ipv4 range allocated to community, this might be different to
 					# the one used in the mesh in cidr notation, e.g. 10.35.0.1/18
   , mesh_mtu     => "1374"
   , mesh_peerings    => "/root/mesh_peerings.yaml"	# path to the local peerings description yaml file
 
-  , fastd_secret => "/root/gw02-fastd-secret.key"	
+  , fastd_secret => "/root/fastd_secret.key"	
   , fastd_port   => 10050
   , fastd_peers_git => 'https://github.com/Freifunk-Cuxhaven/ffcux-gw-peers.git'	# this will be pulled automatically during puppet apply
 
@@ -41,9 +41,25 @@ ffnord::mesh { 'mesh_ffcux':
   , dns_servers => ['10.115.2.1']   		# should be the same as $router_id
 }
 
+#class {'ffnord::vpn::provider::pia':
+#  openvpn_server => "germany.privateinternetaccess.com",
+#  openvpn_port   => 3478,
+#  openvpn_user   => "xxxxxxx",
+#  openvpn_password => "xxxxxxxx";
+#}
+
 ffnord::named::zone {
   "ffcux": zone_git => "https://github.com/Freifunk-Cuxhaven/dns_ffcux.git", exclude_meta => 'cuxhaven';
 }
+
+#ffnord::icvpn::setup {
+#  'nordheide00':
+#  icvpn_as => 65115,
+#  icvpn_ipv4_address => "10.207.0.89",
+#  icvpn_ipv6_address => "fec0::a:cf:0:59",
+#  icvpn_exclude_peerings     => [nordheide],
+#  tinc_keyfile       => "/root/gw00-icvpn-rsa_key.priv"
+#}
 
 class {
   ['ffnord::etckeeper','ffnord::rsyslog']:
