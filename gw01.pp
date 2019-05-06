@@ -32,7 +32,7 @@ ffnord::mesh { 'mesh_ffcux':
   , mesh_mtu     => "1374"
   , mesh_peerings    => "/root/mesh_peerings.yaml"	# path to the local peerings description yaml file
 
-  , fastd_secret => "/root/gw01-fastd-secret.key"	
+  , fastd_secret => "/root/fastd_secret.key"	
   , fastd_port   => 10050
   , fastd_peers_git => 'https://github.com/Freifunk-Cuxhaven/ffcux-gw-peers.git'	# this will be pulled automatically during puppet apply
 
