@@ -27,7 +27,7 @@ ffnord::mesh { 'mesh_ffcux':
   , vpn_mac  => "16:ca:ff:ee:ba:be"
   , mesh_ipv6 => "fdec:c0f1:afda::/64"
   , mesh_ipv4  => "10.115.0.1/19"	# ipv4 address of mesh device in cidr notation, e.g. 10.35.0.1/19
-  , range_ipv4 => "10.115.0.0/18"	# ipv4 range allocated to community, this might be different to
+  , range_ipv4 => "10.115.0.0/23"	# ipv4 range allocated to community, this might be different to
 					# the one used in the mesh in cidr notation, e.g. 10.35.0.1/18
   , mesh_mtu     => "1374"
   , mesh_peerings    => "/root/mesh_peerings.yaml"	# path to the local peerings description yaml file
