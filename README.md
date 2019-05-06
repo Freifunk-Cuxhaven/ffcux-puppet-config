@@ -2,7 +2,7 @@
 
 ## First, make sure your system is debian jessie, system is up to date. git has to be installed.
 ## A screen session is required. 
-## add the key for batman sources
+## add the key for fastd sources
     apt-key adv --recv-keys --keyserver keys.gnupg.net 16EF3F64CB201D9C
 
 ### 1. change to /opt
