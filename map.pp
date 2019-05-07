@@ -13,7 +13,7 @@ class { 'ffnord::params':
 
   max_backlog  => 5000,           # Define the maximum packages in buffer
   include_bird4 => false,
-  maintenance => 0,
+  maintenance => 1,
 
   batman_version => 15,            # B.A.T.M.A.N. adv version
 }
