@@ -34,7 +34,7 @@ hostname $HOST_PREFIX$VPN_NUMBER
 #echo "127.0.1.1 $SUBDOMAIN_PREFIX$VPN_NUMBER.$DOMAIN $HOST_PREFIX$VPN_NUMBER" >>/etc/hosts
 rm /etc/hostname
 touch /etc/hostname
-echo "$VPN_NUMBER$HOST_PREFIX" >>/etc/hostname
+echo "$HOST_PREFIX$VPN_NUMBER" >>/etc/hostname
 
 # install needed packages
 apt-get -y install sudo apt-transport-https git nload
